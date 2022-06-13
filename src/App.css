@@ -51,7 +51,9 @@ App {
   font-size: 40px;
 }
 .main {
-  display: flex;
+  display: grid;
+  column-gap: 50px;
+  row-gap: 50px;
   justify-content: center;
 }
 
