@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+.Header {
+  display: block;
+  width: 100%;
+  background-color: rgb(7, 116, 125);
+  text-align: center;
+  color: white;
+  height: 100px;
+  border-radius: 6em;
+  justify-content: center;
+  font-size: 40px;
+}
