@@ -50,11 +50,13 @@ App {
   justify-content: center;
   font-size: 40px;
 }
-.main {
-  display: grid;
-  column-gap: 50px;
-  row-gap: 50px;
-  justify-content: center;
+.Main {
+  display: flex;
+  /* column-gap: 50px;
+  row-gap: 50px; */
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .articleCard {

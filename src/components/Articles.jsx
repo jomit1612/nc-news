@@ -11,8 +11,8 @@ const Articles = () => {
   }, []);
 
   return (
-    <section className="Main">
-      <ul className="ArticlesList">
+    <section className="Ma">
+      <ul className="Main">
         {articles.map((article) => {
           return (
             <li key={article.article_id} className="articleCard">
