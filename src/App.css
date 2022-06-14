@@ -117,3 +117,7 @@ App {
   justify-content: center;
   padding: 10px;
 }
+
+.error-message {
+  font-size: 200px;
+}

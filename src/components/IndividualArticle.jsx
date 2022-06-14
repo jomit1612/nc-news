@@ -20,8 +20,8 @@ const ViewArticle = () => {
       });
   }, []);
 
-  if (error)
-    if (isLoading) return <h1 className="loading">Articles loading!</h1>;
+  if (error) return <h1 className="error-message">404 article not found</h1>;
+  if (isLoading) return <h1 className="loading">Articles loading!</h1>;
 
   return (
     <section className="Ma">
