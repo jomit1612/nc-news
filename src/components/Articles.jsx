@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { getArticles } from "../Utils/api";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(true);
-
+  const { article_id } = useParams();
   useEffect(() => {
-    getArticles()
+    getArticles(article_id)
       .then((res) => {
         setArticles(res.data.articles);
         setIsLoading(false);
@@ -28,7 +30,7 @@ const Articles = () => {
             <li key={article.article_id} className="articleCard">
               <h3>{article.title}</h3>
               <h3>User:{article.author}</h3>
-              <h3>Topic:{article.topic}</h3>
+              <Link to={`/articles/${article.article_id}`}>View Article </Link>
             </li>
           );
         })}

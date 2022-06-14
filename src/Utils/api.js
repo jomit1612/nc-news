@@ -13,3 +13,9 @@ export const getArticles = () => {
     },
   });
 };
+
+export const getArticlesbyId = (article_id) => {
+  return articlesApi.get(`/articles/${article_id}`).then((res) => {
+    return res.data;
+  });
+};
