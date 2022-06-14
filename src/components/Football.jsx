@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getArticles } from "../Utils/api";
 
-const Articles = () => {
+const Football = () => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(true);
@@ -20,21 +20,24 @@ const Articles = () => {
 
   if (error)
     if (isLoading) return <h1 className="loading">Articles loading!</h1>;
+
   return (
     <section className="Ma">
+      <h1 className="link-header">Football</h1>
       <ul className="Main">
         {articles.map((article) => {
-          return (
-            <li key={article.article_id} className="articleCard">
-              <h3>{article.title}</h3>
-              <h3>User:{article.author}</h3>
-              <h3>Topic:{article.topic}</h3>
-            </li>
-          );
+          if (article.topic === "football")
+            return (
+              <li key={article.article_id} className="articleCard">
+                <h3>{article.title}</h3>
+                <h3>User:{article.author}</h3>
+                <h3>Votes:{article.votes}</h3>
+              </li>
+            );
         })}
       </ul>
     </section>
   );
 };
 
-export default Articles;
+export default Football;
