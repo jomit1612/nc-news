@@ -6,6 +6,7 @@ import Nav from "./Utils/nav";
 import Cooking from "./components/Cooking";
 import Coding from "./components/Coding";
 import Football from "./components/Football";
+import ViewArticle from "./components/IndividualArticle";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/coding" element={<Coding />} />
         <Route path="/cooking" element={<Cooking />} />
         <Route path="/football" element={<Football />} />
+        <Route path="/articles/:article_id" element={<ViewArticle />} />
       </Routes>
     </>
   );
