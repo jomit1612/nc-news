@@ -8,7 +8,6 @@ import Coding from "./components/Coding";
 import Football from "./components/Football";
 import ViewArticle from "./components/IndividualArticle";
 import Users from "./components/Users";
-import { useState } from "react";
 
 function App() {
   return (

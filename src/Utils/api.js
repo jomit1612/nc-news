@@ -36,3 +36,12 @@ export const patchVotes = (article_id, inc_votes) => {
       return res.data;
     });
 };
+
+export const getComments = (article_id, body, username) => {
+  const resBody = { username, body };
+  return articlesApi
+    .get(`/articles/${article_id}/comments`, resBody)
+    .then((res) => {
+      return res.data;
+    });
+};
