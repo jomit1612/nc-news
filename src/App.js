@@ -8,7 +8,6 @@ import Coding from "./components/Coding";
 import Football from "./components/Football";
 import ViewArticle from "./components/IndividualArticle";
 import Users from "./components/Users";
-import ViewComments from "./components/comments";
 
 function App() {
   return (
@@ -22,10 +21,6 @@ function App() {
         <Route path="/football" element={<Football />} />
         <Route path="/articles/:article_id" element={<ViewArticle />} />
         <Route path="/users" element={<Users />} />
-        <Route
-          path="/articles/:article_id/comments"
-          element={<ViewComments />}
-        />
       </Routes>
     </>
   );

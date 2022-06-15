@@ -16,7 +16,7 @@ const ViewComments = () => {
   return (
     <>
       <section className="Ma">
-        <ul className="comment">
+        <ol className="comment">
           {allComments.map((comment) => {
             return (
               <li key={comment.article_id} className="commentCard">
@@ -26,7 +26,7 @@ const ViewComments = () => {
               </li>
             );
           })}
-        </ul>
+        </ol>
       </section>
     </>
   );

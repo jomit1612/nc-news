@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { getArticlesbyId } from "../Utils/api";
 import { useParams } from "react-router-dom";
 import Votes from "../components/Votes";
-import { Link } from "react-router-dom";
+
+import ViewComments from "./Comments";
 
 const ViewArticle = () => {
   const [articles, setArticles] = useState({});
@@ -33,13 +34,12 @@ const ViewArticle = () => {
           <h3>User:{articles.author}</h3>
           <h3>Topic:{articles.topic}</h3>
           <h3>{articles.body}</h3>
-          <h3>Comments:{articles.comment_count}</h3>
           <Votes votes={articles.votes} article_id={articles.article_id} />
-          <button>
-            <Link to={`/articles/${article_id}/comments`}>View Comments</Link>
-          </button>
+          <h3>Comments:{articles.comment_count}</h3>
         </li>
       </ul>
+      <h2 className="allComments">Comments</h2>
+      <ViewComments />
     </section>
   );
 };
