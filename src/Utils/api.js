@@ -19,3 +19,20 @@ export const getArticlesbyId = (article_id) => {
     return res.data;
   });
 };
+
+export const getUsers = () => {
+  const { users } = useParams;
+  return articlesApi.get("/users", {
+    params: {
+      users,
+    },
+  });
+};
+
+export const patchVotes = (article_id, inc_votes) => {
+  return articlesApi
+    .patch(`/articles/${article_id}`, { inc_votes })
+    .then((res) => {
+      return res.data;
+    });
+};
