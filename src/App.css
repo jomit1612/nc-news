@@ -147,3 +147,22 @@ App {
   text-align: center;
   padding: 10px;
 }
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.commentCard {
+  list-style-type: none;
+  background-color: rgb(89, 213, 213);
+  width: 1570px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 15px;
+  justify-content: center;
+  text-align: left;
+  padding: 10px;
+}
