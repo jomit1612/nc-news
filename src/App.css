@@ -121,3 +121,29 @@ App {
 .error-message {
   font-size: 200px;
 }
+
+.userImage {
+  display: flex;
+  margin: 0.6em;
+  width: 10em;
+  height: 10em;
+}
+
+.Users {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.usersCard {
+  list-style-type: none;
+  background-color: rgb(89, 213, 213);
+  width: 270px;
+  height: 400px;
+  margin: 10px;
+  border-radius: 15px;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}

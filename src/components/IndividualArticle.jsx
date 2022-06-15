@@ -1,24 +1,25 @@
 import { useEffect, useState } from "react";
 import { getArticlesbyId } from "../Utils/api";
 import { useParams } from "react-router-dom";
+import Votes from "../components/Votes";
 
 const ViewArticle = () => {
   const [articles, setArticles] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(true);
+  const [error, setError] = useState(false);
   const { article_id } = useParams();
   useEffect(() => {
     getArticlesbyId(article_id)
       .then((res) => {
-        console.log(res.article);
         setArticles(res.article);
         setIsLoading(false);
         setError(false);
       })
       .catch((err) => {
         console.log(err);
+        setError(true);
       });
-  }, []);
+  }, [article_id]);
 
   if (error) return <h1 className="error-message">404 article not found</h1>;
   if (isLoading) return <h1 className="loading">Articles loading!</h1>;
@@ -32,7 +33,9 @@ const ViewArticle = () => {
           <h3>Topic:{articles.topic}</h3>
           <h3>{articles.body}</h3>
           <h3>Comments:{articles.comment_count}</h3>
-          <h3>Votes:{articles.Votes}</h3>
+          <Votes votes={articles.votes} article_id={articles.article_id} />
+
+          <button>View Comments</button>
         </li>
       </ul>
     </section>

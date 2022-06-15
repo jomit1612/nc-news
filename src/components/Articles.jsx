@@ -18,7 +18,7 @@ const Articles = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [article_id]);
 
   if (error)
     if (isLoading) return <h1 className="loading">Articles loading!</h1>;

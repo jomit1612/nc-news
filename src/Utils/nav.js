@@ -19,6 +19,9 @@ const Nav = () => {
           <Link to="/football" className="link">
             football
           </Link>
+          <Link to="/users" className="link">
+            Users
+          </Link>
         </section>
         <section></section>
       </section>
