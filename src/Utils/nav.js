@@ -4,23 +4,38 @@ const Nav = () => {
   return (
     <>
       <section className="Nav">
-        <h3>Available Topics:</h3>
         <section className="topics">
-          <Link to="/" className="link"></Link>
           <Link to="/" className="link">
-            All items
+            <img
+              src="https://img.icons8.com/dusk/900/undefined/home--v1.png"
+              alt="home button"
+              className="linkimg"
+            ></img>
           </Link>
+
           <Link to="/cooking" className="link">
-            cooking
+            <img
+              src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/undefined/external-cooking-stay-at-home-flaticons-flat-flat-icons-3.png"
+              alt="Link to cooking articles"
+            />
           </Link>
           <Link to="/coding" className="link">
-            coding
+            <img
+              src="https://img.icons8.com/external-prettycons-solid-prettycons/60/undefined/external-coding-education-prettycons-solid-prettycons.png"
+              alt="link to coding articles"
+            />
           </Link>
           <Link to="/football" className="link">
-            football
+            <img
+              src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/undefined/external-football-germany-icongeek26-glyph-icongeek26.png"
+              alt="link to football articles"
+            />
           </Link>
           <Link to="/users" className="link">
-            Users
+            <img
+              src="https://img.icons8.com/doodle/48/undefined/group.png"
+              alt="users link"
+            />
           </Link>
         </section>
         <section></section>

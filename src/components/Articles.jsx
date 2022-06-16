@@ -30,7 +30,12 @@ const Articles = () => {
             <li key={article.article_id} className="articleCard">
               <h3>{article.title}</h3>
               <h3>User:{article.author}</h3>
-              <Link to={`/articles/${article.article_id}`}>View Article </Link>
+              <Link to={`/articles/${article.article_id}`}>
+                <img
+                  src="https://img.icons8.com/clouds/100/undefined/news.png"
+                  alt="link to read article"
+                />
+              </Link>
             </li>
           );
         })}
