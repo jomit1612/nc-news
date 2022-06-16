@@ -45,3 +45,13 @@ export const getComments = (article_id, body, username) => {
       return res.data;
     });
 };
+
+export const postComment = (article_id, username, body) => {
+  const newComment = { username, body };
+
+  return articlesApi
+    .post(`/articles/${article_id}/comments`, newComment)
+    .then((res) => {
+      return res.data;
+    });
+};

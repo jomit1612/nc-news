@@ -21,10 +21,11 @@ const Users = () => {
   if (error) if (isLoading) return <h1 className="loading">Users loading!</h1>;
   return (
     <section className="Ma">
+      <h1 className="link-header">Users</h1>
       <ul className="Users">
         {users.map((user) => {
           return (
-            <li key={user.userName} className="usersCard">
+            <li key={user.username} className="usersCard">
               <img
                 className="userImage"
                 src={user.avatar_url}

@@ -61,33 +61,47 @@ App {
   list-style-type: none;
   background-color: rgb(89, 213, 213);
   width: 270px;
-  height: 200px;
+  height: 270px;
   margin: 10px;
   border-radius: 15px;
   justify-content: center;
   text-align: center;
   padding: 10px;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .loading {
   text-align: center;
 }
 .Nav {
-  display: block;
-  width: 100%;
+  display: flex;
   text-align: center;
+  font-size: 1.2rem;
+  justify-content: center;
+
   background-color: beige;
   max-width: 100%;
+  max-height: 50%;
+  margin: 15px;
+  border-radius: 30px;
 }
-.Topics {
-  padding: 20px;
-  max-width: 100%;
-}
+
 .link {
-  padding: 100px;
-  text-transform: uppercase;
-  text-align: center;
+  display: inline-flex;
+  font-size: 1.2rem;
   max-width: 100%;
+  max-height: 50%;
+  margin: 15px;
+
+  max-width: 100%;
+}
+.voteButton {
+  border-radius: 50px;
+  max-width: 100%;
+}
+.linkimg {
+  width: 60px;
 }
 .link:visited {
   color: grey;
@@ -134,6 +148,8 @@ App {
   margin: 0.6em;
   width: 10em;
   height: 10em;
+  justify-content: center;
+  align-items: center;
 }
 
 .Users {
@@ -163,7 +179,7 @@ App {
 }
 
 .commentCard {
-  /* list-style-type: none; */
+  list-style-type: none;
   background-color: rgb(89, 213, 213);
   width: 1425px;
   height: 50%;
@@ -180,4 +196,30 @@ App {
 
   font-size: 40px;
   color: black;
+}
+.submitButtonone {
+  align-items: center;
+  display: inline-flex;
+
+  border-radius: 10px;
+
+  height: 50px;
+  justify-content: center;
+}
+.submitButtontwo {
+  display: inline-flex;
+
+  border-radius: 10px;
+  width: 50%;
+  height: 50px;
+  justify-content: center;
+}
+.submitButton {
+  display: inline-flex;
+  justify-content: center;
+  width: 85%;
+}
+.submitButtonthree {
+  display: inline-flex;
+  justify-content: center;
 }
