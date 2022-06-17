@@ -23,30 +23,32 @@ export const AddComment = ({ article_id }) => {
     <h1>Comment added!</h1>
   ) : (
     <form className="form" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Username"
-        className="submitButtonone"
-        value={user}
-        onChange={(event) => {
-          setUser(event.target.value);
-        }}
-      ></input>
-      <input
-        type="text"
-        value={commentAdded}
-        placeholder="Add comment"
-        className="submitButtontwo"
-        onChange={(event) => {
-          setcommentAdded(event.target.value);
-        }}
-      ></input>
+      <label>
+        <textarea
+          rows="1"
+          cols="20"
+          type="text"
+          placeholder="Username"
+          className="username"
+          value={user}
+          onChange={(event) => {
+            setUser(event.target.value);
+          }}
+        ></textarea>
+        <textarea
+          rows="4"
+          cols="50"
+          value={commentAdded}
+          placeholder="Add comment"
+          className="commentmade"
+          onChange={(event) => {
+            setcommentAdded(event.target.value);
+          }}
+        ></textarea>
+      </label>
       <div className="submitButtonthree">
         <button type="submit" className="submitButton">
-          <img
-            src="https://img.icons8.com/ios/20/undefined/add--v1.png"
-            alt="submit button for adding comment"
-          />
+          Add comment
         </button>
       </div>
     </form>
