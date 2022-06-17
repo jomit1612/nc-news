@@ -5,6 +5,7 @@ import { deleteComment } from "../Utils/api";
 
 const ViewComments = () => {
   const [allComments, setAllComments] = useState([]);
+  const [commentGone, setCommentGone] = useState(false);
 
   const { article_id } = useParams();
   useEffect(() => {
@@ -15,11 +16,16 @@ const ViewComments = () => {
 
   const removeComment = (comment_id) => {
     deleteComment(comment_id).then(setAllComments(allComments));
+    setCommentGone(true);
   };
 
   return (
     <>
       <section className="Ma">
+        <div>
+          {commentGone === true ? <h1>Comment deleted</h1> : null}
+          {""}
+        </div>
         <ol className="comment">
           {allComments.map((comment) => {
             return (
