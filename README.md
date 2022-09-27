@@ -1,4 +1,4 @@
-
+Welcome to NC News
 
 A responsive, multi-page social news app, built using Javascrip,React,HTML and CSS..
 
